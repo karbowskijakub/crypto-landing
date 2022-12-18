@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import MainPage from './MainPage'
-import Navbar from '../components/organisms/Navbar/Navbar'
+
 
 export default function Home() {
   return (

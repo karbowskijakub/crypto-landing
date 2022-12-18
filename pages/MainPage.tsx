@@ -5,6 +5,7 @@ import PortfolioSection from '../components/organisms/PortfolioSection/Portfolio
 import StrategySection from '../components/organisms/StrategySection/StrategySection'
 import ResultSection from '../components/organisms/ResultSection/ResultSection'
 import CoreSection from '../components/organisms/CoreSection/CoreSection'
+
 const MainPage = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const MainPage = () => {
  <StrategySection/>
  <ResultSection/>
  <CoreSection/>
+
     </>
   )
 }

@@ -1,9 +1,12 @@
-import React from 'react'
+
 import Navbar from'../organisms/Navbar/Navbar'
-const MainTemplate = () => {
+import Footer from '../organisms/Footer/Footer'
+const MainTemplate = ({children}) => {
   return (
     <>
     <Navbar/>
+   {children}
+   <Footer/>
     </>
   )
 }
