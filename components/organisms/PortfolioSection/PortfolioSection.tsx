@@ -69,10 +69,11 @@ const PortfolioSection = () => {
 						Latin literature from 45 BC, making it over 2000 years old.
 					</p>
 				</TextBox>
-				
+	
 				{crypto.map((cryptoData) => (
           <PortfolioProject key={cryptoData['name']} cryptoData={cryptoData} />
         ))}
+		
 				<ButtonBox>
 				
 					<HeroButtonBlack
