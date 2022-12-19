@@ -12,8 +12,8 @@ const slideRight = {
 		opacity: 1,
 		transition: {
 			type: 'spring',
-			duration: duration || 0,
-			delay: delay || 0.2,
+			duration: duration || 0.9,
+			delay: delay || 0.5,
 		},
 	}),
 }
