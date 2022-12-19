@@ -69,7 +69,7 @@ Core of the company</h1>
             </p>
         </TextBox>
         {core.map((coreData) => (
-  <CoreInfo key={core.name} coreData={coreData} />
+  <CoreInfo key={coreData.name} coreData={coreData} />
 ))}
 
         

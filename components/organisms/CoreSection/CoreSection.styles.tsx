@@ -10,5 +10,5 @@ display:flex;
 align-items:flex-start;
 justify-content:center;
 background:${({ theme }) => theme.colors.white};
-
+margin-bottom:3em;
 `

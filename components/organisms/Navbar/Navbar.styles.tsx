@@ -22,7 +22,7 @@ width:1200px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-
+padding:2em;
 `
 export const LogoWrapper = styled.div`
 z-index:5;
@@ -34,7 +34,7 @@ font-size: ${({ theme }) => theme.fontSize.xl};
 color:${({ theme }) => theme.colors.white};
 font-weight:bold;
 transition: all 0.3s;
-margin-left:1.5em;
+
 &:hover {
     padding-left:0.1em;
 }
@@ -49,7 +49,7 @@ z-index: 100;
 
 export const HamburgerDiv = styled.div`
 color: ${({ theme }) => theme.colors.white};
-	margin-right: 1.5em;
+	
 	z-index: 20;
 	@media only screen and ${breakpoints.device.md} {
 		display: none;
