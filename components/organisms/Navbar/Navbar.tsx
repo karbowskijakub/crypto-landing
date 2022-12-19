@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Container, NavWrapper, LogoContainer, Links, HamburgerDiv, HamburgerMenu,LogoWrapper } from './Navbar.styles'
+import { Container, NavWrapper, LogoContainer,  HamburgerDiv, HamburgerMenu,LogoWrapper } from './Navbar.styles'
 import NavLinks from '../../molecules/NavLinks/NavLinks'
 import Sidebar from '../Sidebar/Sidebar'
 import { useState } from 'react'
@@ -26,7 +26,10 @@ const Navbar = () => {
 			</NavWrapper>
 			
 		</Container>
+		
 		<AnimatePresence>
+			{/* 
+// @ts-ignore */}
 		{isOpen && <Sidebar isOpen={() => setOpen(false)} setOpen={setOpen} />}</AnimatePresence></>
 	)
 }

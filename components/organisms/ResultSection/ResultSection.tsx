@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React, { useContext } from 'react'
 import { Decoration} from '../../atoms/SectionScheme/SectionScheme.styles'
-import { slideRight,Right } from '../../animations/animations.ts'
+import { slideRight,Right } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 import { HeroButtonBlack } from '../../atoms/Button/Button'
@@ -35,6 +36,7 @@ const ResultSection = () => {
     <Container>
     <Decoration
 ref={ref4}
+// @ts-ignore
 variants={slideRight}
 initial='initial'
 custom={{ duration: 1.1 }}

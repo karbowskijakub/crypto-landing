@@ -1,7 +1,7 @@
 
 import Navbar from'../organisms/Navbar/Navbar'
 import Footer from '../organisms/Footer/Footer'
-const MainTemplate = ({children}) => {
+const MainTemplate = ({children}:any) => {
   return (
     <>
     <Navbar/>

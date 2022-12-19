@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Decoration,InfoBox,TitleBox,TextBox,ButtonBox,CryptoBox, DataBox, IconBox, InformationBox, NameBox} from '../../atoms/SectionScheme/SectionScheme.styles'
-import { slideRight,Right } from '../../animations/animations.ts'
+import { slideRight,Right } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 import { HeroButtonBlack } from '../../atoms/Button/Button'
@@ -69,7 +69,7 @@ Core of the company</h1>
             </p>
         </TextBox>
         {core.map((coreData) => (
-  <CoreInfo key={coreData.name} coreData={coreData} />
+  <CoreInfo key={coreData['name']} coreData={coreData} />
 ))}
 
         

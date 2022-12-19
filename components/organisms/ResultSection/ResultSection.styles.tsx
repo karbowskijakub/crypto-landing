@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import breakpoints from '../../../assets/breakpoints/breakpoints.ts'
+import breakpoints from '../../../assets/breakpoints/breakpoints.js'
 import { motion } from 'framer-motion'
 
 export const Container = styled.div`

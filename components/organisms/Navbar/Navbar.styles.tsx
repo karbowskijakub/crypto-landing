@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { AiFillLinkedin } from 'react-icons/ai'
 import { AiFillTwitterSquare } from 'react-icons/ai'
 import { Cross as Hamburger } from 'hamburger-react'
-import breakpoints from '../../../assets/breakpoints/breakpoints.ts'
+import breakpoints from '../../../assets/breakpoints/breakpoints.js'
 
 export const Container = styled.nav`
 position:absolute;

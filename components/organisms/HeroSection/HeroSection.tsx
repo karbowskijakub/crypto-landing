@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/legacy/image'
 import { HeroWrapper, InfoBox, Title,Text,Line,Buttons,HeroLink,Share,Paragraph } from './HeroSection.styles'
-import {slideRight,Right,scaleY} from '../../animations/animations.ts'
+import {slideRight,Right,scaleY} from '../../animations/animations.js'
 import {HeroButton} from '../../atoms/Button/Button'
 
 

@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import { Decoration,InfoBox,TitleBox,TextBox,ButtonBox,CryptoBox, DataBox, IconBox, InformationBox, CategoryBox, NameBox} from '../../atoms/SectionScheme/SectionScheme.styles'
-import { slideRight,Right } from '../../animations/animations.ts'
+import { slideRight,Right } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
+// @ts-nocheck
 import { useAnimation } from 'framer-motion'
 import { HeroButtonBlack } from '../../atoms/Button/Button'
 import { HeroLinkBlack } from '../HeroSection/HeroSection.styles'
@@ -70,11 +71,13 @@ const PortfolioSection = () => {
 				</TextBox>
 				
 				{crypto.map((cryptoData) => (
-          <PortfolioProject key={cryptoData.name} cryptoData={cryptoData} />
+          <PortfolioProject key={cryptoData['name']} cryptoData={cryptoData} />
         ))}
 				<ButtonBox>
+				
 					<HeroButtonBlack
 							ref={ref4}
+						
 							variants={Right}
 							initial='initial'
 							custom={{ duration: 1.1 }}

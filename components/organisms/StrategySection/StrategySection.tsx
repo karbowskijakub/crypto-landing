@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Decoration,InfoBox,TitleBox,TextBox,ButtonBox,CryptoBox, DataBox, IconBox, InformationBox, NameBox} from '../../atoms/SectionScheme/SectionScheme.styles'
-import { slideRight,Right } from '../../animations/animations.ts'
+import { slideRight,Right } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 import { HeroButtonBlack } from '../../atoms/Button/Button'
@@ -70,7 +70,7 @@ const StrategySection = () => {
 					</p>
 				</TextBox>
 				{strategy.map((strategyData) => (
-          <StrategyInfo key={strategyData.name} strategyData={strategyData} />
+          <StrategyInfo key={strategyData['name']} strategyData={strategyData} />
         ))}
 
 				

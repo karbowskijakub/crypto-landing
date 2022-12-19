@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import breakpoints from '../../../assets/breakpoints/breakpoints.ts'
+import breakpoints from '../../../assets/breakpoints/breakpoints.js'
 import { motion } from 'framer-motion'
 import { Cross as Hamburger } from 'hamburger-react'
 
@@ -13,6 +13,8 @@ bottom:0;
 right:0;
 
 `
+
+
 export const MobileLinks = styled(motion.div)`
 position:fixed;
 right:0;

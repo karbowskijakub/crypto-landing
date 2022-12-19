@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import { Background, MobileLinks,HamburgerDiv, HamburgerMenu } from './Sidebar.styles'
 import {
@@ -5,19 +6,27 @@ import {
 	IconsWrapper,
 	LinkContainerIcon,
 	TwitterIcon,
-	LinkedinIcon,
-	MobileLinkContainer,
+	LinkedinIcon
+	
 	
 } from '../../molecules/NavLinks/NavLinks.styles'
 import { useEffect } from 'react'
 
+
+interface Open {
+	setOpen?:any;
+	isOpen?:any;
+  }
+  
+
+
 const sidebarTransition = { type: 'spring', duration: 0.4 }
 
-const Sidebar = ({ isOpen,setOpen }) => {
+const Sidebar = ({ isOpen,setOpen }:Open) => {
 	useEffect(() => {
 		document.body.style.overflow = 'hidden'
 
-		return () => (document.body.style.overflow = '')
+		return () =>{ (document.body.style.overflow = '')};
 	}, [])
 	const ClassName = isOpen ? 'active' : null
 	return (
@@ -40,6 +49,7 @@ const Sidebar = ({ isOpen,setOpen }) => {
 					transition: sidebarTransition,
 				}}
 				exit={{ x: '100%', transition: sidebarTransition }}>
+					
 				<LinkContainer className={ClassName} href='#'>
 					Home
 				</LinkContainer>

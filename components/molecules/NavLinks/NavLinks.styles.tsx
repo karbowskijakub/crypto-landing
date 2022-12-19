@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { AiFillLinkedin } from 'react-icons/ai'
 import { AiFillTwitterSquare } from 'react-icons/ai'
-import breakpoints from '../../../assets/breakpoints/breakpoints.ts'
+import breakpoints from '../../../assets/breakpoints/breakpoints.js'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 

@@ -4,7 +4,7 @@ import {TextBox} from '../../organisms/ResultSection/ResultSection.styles'
 import { Container ,CopyBox, CopyContainer,LogoBox,FooterInfo,InfoBox } from './Footer.styles'
 import { LogoContainer } from '../Navbar/Navbar.styles'
 import { IconsWrapper, LinkContainerIcon, LinkedinIcon, TwitterIcon } from '../../molecules/NavLinks/NavLinks.styles'
-import { Right } from '../../animations/animations.ts'
+import { Right } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 

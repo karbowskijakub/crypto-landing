@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container} from './AboutSection.styles'
 import { Decoration,InfoBox,TitleBox,TextBox,ButtonBox} from '../../atoms/SectionScheme/SectionScheme.styles'
-import {slideRight,Right} from '../../animations/animations.ts'
+import {slideRight,Right} from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer';
 import { useAnimation } from 'framer-motion'
 import {HeroButtonBlack} from '../../atoms/Button/Button'

@@ -1,5 +1,6 @@
+// @ts-nocheck
 import React, { useState } from 'react';
-import { crypto,strategy,results,core } from '../data/Crypto/crypto.ts';
+import { crypto,strategy,results,core } from '../data/Crypto/crypto.js';
 
 export const CryptoContext = React.createContext({
     crypto: [],
@@ -9,8 +10,9 @@ export const CryptoContext = React.createContext({
 
   });
 
-const CryptoProvider = ({children}) => {
+const CryptoProvider = ({children}:any) => {
   return (
+
     <CryptoContext.Provider
     value={{
       crypto,

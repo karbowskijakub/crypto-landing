@@ -1,15 +1,19 @@
 import React, { useContext } from 'react';
 import {Element,ElementWrap,ElementNumber,ElementInfo} from './ResultsInfo.styles'
 import { CryptoContext } from '../../../providers/CryptoProvider'
-import { scaleY } from '../../animations/animations.ts'
+import { scaleY } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 import Image from 'next/image'
 
 
+interface Results {
+  resultsData?:any;
+  inView?:any;
+  index:number;
+}
 
-
-const ResultsInfo = ({resultsData,inView,index}) => {
+const ResultsInfo = ({resultsData,inView,index}:Results) => {
 
     const { strategy } = useContext(CryptoContext)
 	const animationControlsThird = useAnimation()

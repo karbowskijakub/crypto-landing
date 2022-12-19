@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import {TitleBox,TextBox,CryptoBox, DataBox, IconBox, InformationBox, NameBox} from '../../atoms/SectionScheme/SectionScheme.styles'
 import { CryptoContext } from '../../../providers/CryptoProvider'
-import { slideRight } from '../../animations/animations.ts'
+import { slideRight } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 import {CategoryBox} from './StrategyInfo.styles'
@@ -9,7 +9,7 @@ import {CategoryBox} from './StrategyInfo.styles'
 
 
 
-const StrategyInfo = ({strategyData}) => {
+const StrategyInfo = ({strategyData}:any) => {
 
 
     const { strategy } = useContext(CryptoContext)

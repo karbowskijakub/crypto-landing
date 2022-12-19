@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 const sidebarTransition = { type: 'spring', duration: 0.4 }
 
-const NavLinks = ({ isOpen }) => {
+const NavLinks = ({ isOpen }:any) => {
 	
 
 	return (
