@@ -21,6 +21,5 @@ a, button {
 }
 
 
-
 `
 export default GlobalStyles

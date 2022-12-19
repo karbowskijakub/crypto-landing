@@ -12,8 +12,8 @@ const slideRight = {
 		opacity: 1,
 		transition: {
 			type: 'spring',
-			delay: delay || 0,
-			duration: duration || 0.9,
+			delay: delay || 0.7,
+			duration: duration || 1.1,
 		},
 	}),
 }
@@ -25,7 +25,7 @@ const Right= {
 		transition: {
 			type: 'spring',
 			duration: duration || 0.9,
-			delay: delay || 0,
+			delay: delay || 0.8,
 		},
 	}),
 }

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Decoration,InfoBox,TitleBox,TextBox,ButtonBox,CryptoBox, DataBox, IconBox, InformationBox, CategoryBox, NameBox} from '../../atoms/SectionScheme/SectionScheme.styles'
-import { slideRight,Right } from '../../animations/animations.js'
+import { slideRight,Right,scaleY } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 // @ts-nocheck
 import { useAnimation } from 'framer-motion'
