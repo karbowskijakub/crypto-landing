@@ -5,7 +5,7 @@ import NavLinks from '../../molecules/NavLinks/NavLinks'
 import Sidebar from '../Sidebar/Sidebar'
 import { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
-
+import { Right } from '../../animations/animations.js'
 const Navbar = () => {
 	const [isOpen, setOpen] = useState(false)
 
@@ -13,16 +13,27 @@ const Navbar = () => {
 		<>
 		<Container>
 			<NavWrapper>
-			<LogoWrapper>
+			<LogoWrapper variants={Right}
+           custom={{ delay: 0.5}} 
+           initial='initial' 
+           animate='animate'>
 					<LogoContainer href='#' passHref>
 						CryptoEnth
 					</LogoContainer>
 				</LogoWrapper>
 
-				<HamburgerDiv>
+				<HamburgerDiv variants={Right}
+           custom={{ delay: 0.5}} 
+           initial='initial' 
+           animate='animate'>
 					<HamburgerMenu toggled={isOpen} rounded toggle={setOpen}></HamburgerMenu>
 				</HamburgerDiv>
-				<NavLinks />
+				<NavLinks 
+				variants={Right}
+           custom={{ delay: 0.5}} 
+           initial='initial' 
+           animate='animate'
+				/>
 			</NavWrapper>
 			
 		</Container>

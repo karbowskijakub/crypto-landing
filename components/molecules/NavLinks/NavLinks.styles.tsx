@@ -67,7 +67,7 @@ display:block;
 	}
 `
 
-export const Links = styled.div`
+export const Links = styled(motion.div)`
 margin: 1em 1em;
 	align-items: center;
 	justify-content: center;

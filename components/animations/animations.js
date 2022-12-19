@@ -6,7 +6,7 @@ const springTransition = {
 }
 
 const slideRight = {
-	initial: { x: -50, opacity: 0 },
+	initial: { x: -30, opacity: 0 },
 	animate: ({ delay, duration }) => ({
 		x: 0,
 		opacity: 1,

@@ -4,6 +4,7 @@ import { AiFillLinkedin } from 'react-icons/ai'
 import { AiFillTwitterSquare } from 'react-icons/ai'
 import { Cross as Hamburger } from 'hamburger-react'
 import breakpoints from '../../../assets/breakpoints/breakpoints.js'
+import { motion } from 'framer-motion'
 
 export const Container = styled.nav`
 position:absolute;
@@ -24,7 +25,7 @@ align-items:center;
 justify-content:space-between;
 padding:2em;
 `
-export const LogoWrapper = styled.div`
+export const LogoWrapper = styled(motion.div)`
 z-index:5;
 `
 export const LogoContainer =styled(Link)`
@@ -47,7 +48,7 @@ export const HamburgerMenu = styled(Hamburger)`
 z-index: 100;
 `
 
-export const HamburgerDiv = styled.div`
+export const HamburgerDiv = styled(motion.div)`
 color: ${({ theme }) => theme.colors.white};
 	
 	z-index: 20;
