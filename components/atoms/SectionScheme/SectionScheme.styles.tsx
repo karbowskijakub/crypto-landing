@@ -77,4 +77,5 @@ font-size: ${({ theme }) => theme.fontSize.m};
 export const InformationBox = styled.div`
 
 font-size: ${({ theme }) => theme.fontSize.md};
+margin-bottom:1em;
 `
