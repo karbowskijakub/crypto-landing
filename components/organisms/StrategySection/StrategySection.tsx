@@ -70,7 +70,7 @@ const StrategySection = ({ strategies }:any) => {
 					</p>
 				</TextBox>
 
-				{strategies.map((strategy:any, i:number) => (
+				{strategies?.map((strategy:any, i:number) => (
 					<StrategyInfo key={i} {...strategy} />
 				))}
 			</InfoBox>

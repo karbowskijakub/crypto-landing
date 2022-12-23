@@ -69,7 +69,7 @@ const CoreSection = ({ cores }:any) => {
 						Latin literature from 45 BC, making it over 2000 years old.
 					</p>
 				</TextBox>
-				{cores.map((core:any, i:number) => (
+				{cores?.map((core:any, i:number) => (
 					<CoreInfo key={i} {...core} />
 				))}
 			</InfoBox>

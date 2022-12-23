@@ -77,7 +77,7 @@ const PortfolioSection = ({ projects }:any) => {
 					</p>
 				</TextBox>
 
-				{projects.map((project:any, i:number) => (
+				{projects?.map((project:any, i:number) => (
 					<PortfolioProject key={i} {...project} />
 				))}
 

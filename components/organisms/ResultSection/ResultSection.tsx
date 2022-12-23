@@ -62,7 +62,7 @@ const ResultSection = ({ results }) => {
 					</TextBox>
 				</ResultBox>
 				<StatsBox ref={ref}>
-					{results.map((result, i) => (
+					{results?.map((result, i) => (
 						<ResultsInfo key={i} {...result} inView={inView} index={i} />
 					))}
 				</StatsBox>
