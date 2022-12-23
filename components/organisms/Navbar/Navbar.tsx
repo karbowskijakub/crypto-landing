@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Container, NavWrapper, LogoContainer,  HamburgerDiv, HamburgerMenu,LogoWrapper } from './Navbar.styles'
+import { Container, NavWrapper, LogoContainer, HamburgerDiv, HamburgerMenu, LogoWrapper } from './Navbar.styles'
 import NavLinks from '../../molecules/NavLinks/NavLinks'
 import Sidebar from '../Sidebar/Sidebar'
 import { useState } from 'react'
@@ -11,37 +11,23 @@ const Navbar = () => {
 
 	return (
 		<>
-		<Container>
-			<NavWrapper>
-			<LogoWrapper variants={Right}
-           custom={{ delay: 0.5}} 
-           initial='initial' 
-           animate='animate'>
-					<LogoContainer href='#' passHref>
-						CryptoEnth
-					</LogoContainer>
-				</LogoWrapper>
+			<Container>
+				<NavWrapper>
+					<LogoWrapper variants={Right} custom={{ delay: 0.5 }} initial='initial' animate='animate'>
+						<LogoContainer href='#' passHref>
+							CryptoEnth
+						</LogoContainer>
+					</LogoWrapper>
 
-				<HamburgerDiv variants={Right}
-           custom={{ delay: 0.5}} 
-           initial='initial' 
-           animate='animate'>
-					<HamburgerMenu toggled={isOpen} rounded toggle={setOpen}></HamburgerMenu>
-				</HamburgerDiv>
-				<NavLinks 
-				variants={Right}
-           custom={{ delay: 0.5}} 
-           initial='initial' 
-           animate='animate'
-				/>
-			</NavWrapper>
-			
-		</Container>
-		
-		<AnimatePresence>
-			{/* 
-// @ts-ignore */}
-		{isOpen && <Sidebar isOpen={() => setOpen(false)} setOpen={setOpen} />}</AnimatePresence></>
+					<HamburgerDiv variants={Right} custom={{ delay: 0.5 }} initial='initial' animate='animate'>
+						<HamburgerMenu toggled={isOpen} rounded toggle={setOpen}></HamburgerMenu>
+					</HamburgerDiv>
+					<NavLinks variants={Right} custom={{ delay: 0.5 }} initial='initial' animate='animate' />
+				</NavWrapper>
+			</Container>
+
+			<AnimatePresence>{isOpen && <Sidebar isOpen={() => setOpen(false)} setOpen={setOpen} />}</AnimatePresence>
+		</>
 	)
 }
 

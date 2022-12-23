@@ -7,50 +7,53 @@ import breakpoints from '../../../assets/breakpoints/breakpoints.js'
 import { motion } from 'framer-motion'
 
 export const Container = styled.nav`
-position:absolute;
-top:0;
-z-index:30;
-width:100%;
-height:130px;
-display:flex;
-align-items:center;
-justify-content:center;
-
+	position: absolute;
+	top: 0;
+	z-index: 30;
+	width: 100%;
+	height: 130px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `
 
-export const NavWrapper =styled.div`
-width:1200px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:2em;
+export const NavWrapper = styled.div`
+	width: 1200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2em;
 `
 export const LogoWrapper = styled(motion.div)`
-z-index:5;
+	z-index: 5;
 `
-export const LogoContainer =styled(Link)`
-z-index:5;
-text-decoration:none;
-font-size: ${({ theme }) => theme.fontSize.xl};
-color:${({ theme }) => theme.colors.white};
-font-weight:bold;
-transition: all 0.3s;
+export const LogoContainer = styled(Link)`
+	z-index: 5;
+	text-decoration: none;
+	font-size: ${({ theme }) => theme.fontSize.xl};
+	color: ${({ theme }) => theme.colors.white};
+	font-weight: bold;
+	transition: all 0.3s;
 
-&:hover {
-    padding-left:0.1em;
-}
-@media only screen and ${breakpoints.device.md} {
-	font-size: ${({ theme }) => theme.fontSize.xxxl};
-}
+	&:hover {
+		padding-left: 0.1em;
+	}
 
+	@media only screen and ${breakpoints.device.xs} {
+		font-size: ${({ theme }) => theme.fontSize.xxl};
+	}
+
+	@media only screen and ${breakpoints.device.md} {
+		font-size: ${({ theme }) => theme.fontSize.xxxl};
+	}
 `
 export const HamburgerMenu = styled(Hamburger)`
-z-index: 100;
+	z-index: 100;
 `
 
 export const HamburgerDiv = styled(motion.div)`
-color: ${({ theme }) => theme.colors.white};
-	
+	color: ${({ theme }) => theme.colors.white};
+
 	z-index: 20;
 	@media only screen and ${breakpoints.device.md} {
 		display: none;

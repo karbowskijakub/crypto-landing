@@ -1,5 +1,3 @@
-
-
 const springTransition = {
 	type: 'spring',
 	duration: 0.3,
@@ -12,21 +10,20 @@ const slideRight = {
 		opacity: 1,
 		transition: {
 			type: 'spring',
-			duration: duration || 0.9,
-			delay: delay || 0.5,
+			duration: duration || 1.1,
+			delay: delay || 0.3,
 		},
 	}),
 }
 
-
-const Right= {
-	initial: {  opacity: 0 },
+const Right = {
+	initial: { opacity: 0 },
 	animate: ({ delay, duration }) => ({
 		opacity: 1,
 		transition: {
 			type: 'spring',
 			duration: duration || 0.2,
-			delay: delay || 0,
+			delay: delay || 0.1,
 		},
 	}),
 }
@@ -43,6 +40,4 @@ const scaleY = {
 	}),
 }
 
-
-
-export { slideRight,Right,scaleY};
+export { slideRight, Right, scaleY }

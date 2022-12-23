@@ -6,18 +6,17 @@ import StrategySection from '../components/organisms/StrategySection/StrategySec
 import ResultSection from '../components/organisms/ResultSection/ResultSection'
 import CoreSection from '../components/organisms/CoreSection/CoreSection'
 
-const MainPage = () => {
-  return (
-    <>
- <HeroSection/>
- <AboutSection/>
- <PortfolioSection/>
- <StrategySection/>
- <ResultSection/>
- <CoreSection/>
-
-    </>
-  )
+const MainPage = ({ projects, strategies, cores, results }) => {
+	return (
+		<>
+			<HeroSection />
+			<AboutSection />
+			<PortfolioSection projects={projects} />
+			<StrategySection strategies={strategies} />
+			<ResultSection results={results} />
+			<CoreSection cores={cores} />
+		</>
+	)
 }
 
 export default MainPage

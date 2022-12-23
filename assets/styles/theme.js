@@ -5,14 +5,15 @@ export const theme = {
       grey:'#9BB6BF',
       blue:'#3E7CB1',
       purple:'#A68C9C',
-      lavender:'#E9EBF8',
+      lavender:'#EEF5FC',
       darkBlue:'#161925'
 
     },
     fontSize: {
+      hl: '64px',
       xxxl: '44px',
       xxl: '34px',
-      xl: '24px',
+      xl: '21px',
       l: '17px',
       m: '12px',
       s: '11px',
