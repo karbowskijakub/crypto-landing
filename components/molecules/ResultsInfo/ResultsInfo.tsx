@@ -8,6 +8,8 @@ import Image from 'next/image'
 interface Results {
 	inView?: any
 	index: number
+	number:string
+	text:string
 }
 
 const ResultsInfo = ({ number, text, inView, index }: Results) => {

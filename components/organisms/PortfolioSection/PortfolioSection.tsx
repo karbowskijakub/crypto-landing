@@ -14,7 +14,6 @@ import {
 } from '../../atoms/SectionScheme/SectionScheme.styles'
 import { slideRight, Right, scaleY } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
-// @ts-nocheck
 import { useAnimation } from 'framer-motion'
 import { HeroButtonBlack } from '../../atoms/Button/Button'
 import { HeroLinkBlack } from '../HeroSection/HeroSection.styles'
@@ -24,7 +23,7 @@ import { Container } from './PortfolioSection.styles'
 import PortfolioProject from '../../molecules/PortfolioProject/PortfolioProject'
 import Image from 'next/image'
 
-const PortfolioSection = ({ projects }) => {
+const PortfolioSection = ({ projects }:any) => {
 	const animationControls = useAnimation()
 	const [ref, inView] = useInView({ threshold: 0.5 })
 	if (inView) {
@@ -78,7 +77,7 @@ const PortfolioSection = ({ projects }) => {
 					</p>
 				</TextBox>
 
-				{projects.map((project, i) => (
+				{projects.map((project:any, i:number) => (
 					<PortfolioProject key={i} {...project} />
 				))}
 

@@ -6,7 +6,14 @@ import StrategySection from '../components/organisms/StrategySection/StrategySec
 import ResultSection from '../components/organisms/ResultSection/ResultSection'
 import CoreSection from '../components/organisms/CoreSection/CoreSection'
 
-const MainPage = ({ projects, strategies, cores, results }) => {
+interface Results {
+	projects?:any
+	strategies?:any
+	cores?:any
+	results?:any
+}
+
+const MainPage = ({ projects, strategies, cores, results }:Results) => {
 	return (
 		<>
 			<HeroSection />

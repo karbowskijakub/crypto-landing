@@ -8,7 +8,6 @@ import {
 	CategoryBox,
 	NameBox,
 } from '../../atoms/SectionScheme/SectionScheme.styles'
-import { CryptoContext } from '../../../providers/CryptoProvider'
 import { slideRight } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'

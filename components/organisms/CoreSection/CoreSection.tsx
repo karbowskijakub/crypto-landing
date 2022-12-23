@@ -17,12 +17,11 @@ import { useAnimation } from 'framer-motion'
 import { HeroButtonBlack } from '../../atoms/Button/Button'
 import { HeroLinkBlack } from '../HeroSection/HeroSection.styles'
 import { ShareBlack } from '../HeroSection/HeroSection.styles'
-import { CryptoContext } from '../../../providers/CryptoProvider'
 import Image from 'next/image'
 import { Container } from './CoreSection.styles'
 import CoreInfo from '../../molecules/CoreInfo/CoreInfo'
 
-const CoreSection = ({ cores }) => {
+const CoreSection = ({ cores }:any) => {
 	const animationControls = useAnimation()
 	const animationControlsSecond = useAnimation()
 	const animationControlsThird = useAnimation()
@@ -70,7 +69,7 @@ const CoreSection = ({ cores }) => {
 						Latin literature from 45 BC, making it over 2000 years old.
 					</p>
 				</TextBox>
-				{cores.map((core, i) => (
+				{cores.map((core:any, i:number) => (
 					<CoreInfo key={i} {...core} />
 				))}
 			</InfoBox>

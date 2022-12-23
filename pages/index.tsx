@@ -1,9 +1,15 @@
 import Head from 'next/head'
 import MainPage from './MainPage'
-import { getPortfolioData, getStrategyData, getCoreData, getResultsData } from '../pages/api/api.ts'
+import { getPortfolioData, getStrategyData, getCoreData, getResultsData } from '../pages/api/api.js'
 
-export default function Home({ projects, strategies, cores, results }) {
-	console.log(results)
+interface Results {
+	projects?:any
+	strategies?:any
+	cores?:any
+	results?:any
+}
+
+export default function Home({ projects, strategies, cores, results }:Results) {
 	return (
 		<>
 			<Head>

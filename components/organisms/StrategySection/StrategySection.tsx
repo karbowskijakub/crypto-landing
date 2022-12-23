@@ -21,7 +21,7 @@ import Image from 'next/image'
 import { Container } from './StrategySection.styles'
 import StrategyInfo from '../../molecules/StrategyInfo/StrategyInfo'
 
-const StrategySection = ({ strategies }) => {
+const StrategySection = ({ strategies }:any) => {
 	const animationControls = useAnimation()
 	const animationControlsSecond = useAnimation()
 	const animationControlsThird = useAnimation()
@@ -70,7 +70,7 @@ const StrategySection = ({ strategies }) => {
 					</p>
 				</TextBox>
 
-				{strategies.map((strategy, i) => (
+				{strategies.map((strategy:any, i:number) => (
 					<StrategyInfo key={i} {...strategy} />
 				))}
 			</InfoBox>
