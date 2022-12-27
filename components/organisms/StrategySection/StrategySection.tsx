@@ -10,7 +10,7 @@ import {
 	IconBox,
 	InformationBox,
 	NameBox,
-	DivBox
+	DivBox,
 } from '../../atoms/SectionScheme/SectionScheme.styles'
 import { slideRight, Right } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
@@ -22,7 +22,7 @@ import Image from 'next/image'
 import { Container } from './StrategySection.styles'
 import StrategyInfo from '../../molecules/StrategyInfo/StrategyInfo'
 
-const StrategySection = ({ strategies }:any) => {
+const StrategySection = ({ strategies }: any) => {
 	const animationControls = useAnimation()
 	const animationControlsSecond = useAnimation()
 	const animationControlsThird = useAnimation()
@@ -60,19 +60,19 @@ const StrategySection = ({ strategies }:any) => {
 					<h1>Our strategy</h1>
 				</TitleBox>
 				<DivBox>
-				<TextBox
-					ref={ref3}
-					variants={Right}
-					initial='initial'
-					custom={{ duration: 1.1 }}
-					animate={animationControlsThird}>
-					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-						Latin literature from 45 BC, making it over 2000 years old.
-					</p>
-				</TextBox>
+					<TextBox
+						ref={ref3}
+						variants={Right}
+						initial='initial'
+						custom={{ duration: 1.1 }}
+						animate={animationControlsThird}>
+						<p>
+							Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+							Latin literature from 45 BC, making it over 2000 years old.
+						</p>
+					</TextBox>
 				</DivBox>
-				{strategies?.map((strategy:any, i:number) => (
+				{strategies?.map((strategy: any, i: number) => (
 					<StrategyInfo key={i} {...strategy} />
 				))}
 			</InfoBox>

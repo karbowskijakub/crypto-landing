@@ -43,19 +43,17 @@ export const TextBox = styled(motion.div)`
 		max-width: 550px;
 		font-size: ${({ theme }) => theme.fontSize.xl};
 	}
-
-
 `
 
 export const TitleBox = styled(motion.div)`
 	text-align: center;
-	
+
 	@media only screen and ${breakpoints.device.sm} {
 		font-size: ${({ theme }) => theme.fontSize.xl};
 	}
 	@media only screen and ${breakpoints.device.lg} {
 		font-size: ${({ theme }) => theme.fontSize.xl};
-        border-bottom: none;
+		border-bottom: none;
 		border-top: 1px solid ${({ theme }) => theme.colors.blue};
 		padding: 1em;
 		position: sticky;

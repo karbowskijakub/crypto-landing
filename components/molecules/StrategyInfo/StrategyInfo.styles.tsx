@@ -10,12 +10,10 @@ export const CategoryBox = styled.div`
 	font-size: ${({ theme }) => theme.fontSize.m};
 	@media only screen and ${breakpoints.device.lgx} {
 		font-size: ${({ theme }) => theme.fontSize.xxl};
-		
 	}
-	
+
 	@media only screen and ${breakpoints.device.lg} {
-		text-align:center;
-		
+		text-align: center;
 	}
 `
 export const CryptoBox = styled(motion.div)`

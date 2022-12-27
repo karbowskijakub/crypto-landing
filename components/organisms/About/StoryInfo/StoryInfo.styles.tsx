@@ -13,7 +13,6 @@ export const IconBox = styled.div`
 		contrast(87%);
 `
 export const SetupBox = styled.div`
-
 	@media only screen and ${breakpoints.device.lg} {
 		display: flex;
 		flex-direction: column;
@@ -34,16 +33,13 @@ export const InformationBox = styled.div`
 `
 
 export const NameBox = styled.div`
-color: ${({ theme }) => theme.colors.blue};
-@media only screen and ${breakpoints.device.lg} {
-	display: flex;
-flex-direction:row;
-justify-content: center;
-h2{
-	
-    font-size: ${({ theme }) => theme.fontSize.xxl};
-}
-
-}
-
+	color: ${({ theme }) => theme.colors.blue};
+	@media only screen and ${breakpoints.device.lg} {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		h2 {
+			font-size: ${({ theme }) => theme.fontSize.xxl};
+		}
+	}
 `

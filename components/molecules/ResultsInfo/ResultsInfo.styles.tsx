@@ -38,5 +38,4 @@ export const ElementInfo = styled.div`
 	@media only screen and ${breakpoints.device.lgx} {
 		font-size: ${({ theme }) => theme.fontSize.xl};
 	}
-	
 `

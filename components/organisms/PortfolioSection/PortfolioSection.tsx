@@ -79,9 +79,7 @@ const PortfolioSection = ({ projects }: any) => {
 						</p>
 					</TextBox>
 				</DivBox>
-				{projects?.map((project: any, i: number) => i < 4 &&(
-					<PortfolioProject key={i} {...project} />
-				))}
+				{projects?.map((project: any, i: number) => i < 4 && <PortfolioProject key={i} {...project} />)}
 
 				<ButtonBox>
 					<HeroButtonBlack

@@ -49,4 +49,4 @@ const getStoryData = async () => {
 	}
 }
 
-export { getPortfolioData, getStrategyData, getCoreData, getResultsData,getStoryData }
+export { getPortfolioData, getStrategyData, getCoreData, getResultsData, getStoryData }

@@ -11,7 +11,7 @@ import {
 import { slideRight } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
-import {CryptoBox,NameBox} from './PortfolioProject.styles'
+import { CryptoBox, NameBox } from './PortfolioProject.styles'
 import Image from 'next/legacy/image'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
@@ -40,7 +40,7 @@ const PortfolioProject = ({ date, name, type, text, thumbnail }: any) => {
 								src={'https:' + thumbnail.fields.file.url}
 								width={thumbnail.fields.file.details.image.width}
 								height={thumbnail.fields.file.details.image.height}
-								alt='dds'
+								alt='crypto icon'
 							/>
 						</IconBox>
 

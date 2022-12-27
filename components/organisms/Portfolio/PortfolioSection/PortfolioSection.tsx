@@ -58,11 +58,9 @@ const PortfolioSection = ({ projects }: any) => {
 			/>
 
 			<InfoBox>
-			
 				{projects?.map((project: any, i: number) => (
 					<PortfolioProject key={i} {...project} />
 				))}
-
 			</InfoBox>
 		</Container>
 	)

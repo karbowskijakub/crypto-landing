@@ -17,7 +17,7 @@ export const SetupBox = styled.div`
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		align-items:center;
+		align-items: center;
 	}
 `
 export const InformationBox = styled.div`
@@ -33,14 +33,13 @@ export const InformationBox = styled.div`
 	}
 `
 export const NameBox = styled.div`
-
-@media only screen and ${breakpoints.device.lg} {
-	display: flex;
-flex-direction:row;
-align-items:center;
-justify-content: center;
-text-align:center;
-}
+	@media only screen and ${breakpoints.device.lg} {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
 
 	color: ${({ theme }) => theme.colors.black};
 `

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import Image from 'next/legacy/image'
 import {
@@ -12,7 +13,7 @@ import {
 	Shadow,
 } from '../../HeroSection/HeroSection.styles.tsx'
 
-import {HeroWrapper} from './HeroPortfolio.styles'
+import { HeroWrapper } from './HeroPortfolio.styles'
 import { slideRight, Right, scaleY } from '../../../animations/animations.js'
 import { HeroButton } from '../../../../atoms/Button/Button'
 import breakpoints from '../../../../assets/breakpoints/breakpoints.js'
@@ -20,7 +21,7 @@ import breakpoints from '../../../../assets/breakpoints/breakpoints.js'
 const HeroPortfolio = () => {
 	return (
 		<HeroWrapper>
-				<Image
+			<Image
 				src={require('../../../../assets/images/dynamic.jpg')}
 				layout='fill'
 				quality={100}

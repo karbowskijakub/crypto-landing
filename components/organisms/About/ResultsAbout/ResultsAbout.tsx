@@ -1,16 +1,14 @@
 import React from 'react'
-import {Container} from './ResultsAbout.styles'
+import { Container } from './ResultsAbout.styles'
 
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
-import {StatsBox} from '../../ResultSection/ResultSection.styles'
+import { StatsBox } from '../../ResultSection/ResultSection.styles'
 import ResultsInfo from '../../../molecules/ResultsInfo/ResultsInfo'
 import { useSearchParams } from 'next/navigation'
 
-
-const ResultsAbout = ({results}) => {
-
-    const animationControls = useAnimation()
+const ResultsAbout = ({ results }: any) => {
+	const animationControls = useAnimation()
 	const animationControlsSecond = useAnimation()
 	const animationControlsThird = useAnimation()
 	const [ref, inView] = useInView({ threshold: 0.5 })
@@ -27,16 +25,15 @@ const ResultsAbout = ({results}) => {
 	if (inView3) {
 		animationControlsThird.start('animate')
 	}
-  return (
-    <Container>
-
-<StatsBox ref={ref}>
-					{results?.map((result, i) => (
-						<ResultsInfo key={i} {...result} inView={inView} index={i} />
-					))}
-				</StatsBox>
-    </Container>
-  )
+	return (
+		<Container>
+			<StatsBox ref={ref}>
+				{results?.map((result: any, i: number) => (
+					<ResultsInfo key={i} {...result} inView={inView} index={i} />
+				))}
+			</StatsBox>
+		</Container>
+	)
 }
 
 export default ResultsAbout

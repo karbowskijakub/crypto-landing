@@ -4,9 +4,9 @@ import breakpoints from '../../../../assets/breakpoints/breakpoints.js'
 import styled from 'styled-components'
 
 export const HeroWrapper = styled.section`
-width: 100%;
-height: 50vh;
-position: relative;
+	width: 100%;
+	height: 50vh;
+	position: relative;
 `
 export const Title = styled(motion.h1)`
 	display: inline-block;

@@ -17,10 +17,10 @@ import { HeroButtonBlack } from '../../../atoms/Button/Button'
 import { HeroLinkBlack } from '../../HeroSection/HeroSection.styles'
 import { ShareBlack } from '../../HeroSection/HeroSection.styles'
 import Image from 'next/image'
-import { Container, Selector, SelectorItems, Section, TextBox ,TitleBox} from './StorySection.styles'
+import { Container, Selector, SelectorItems, Section, TextBox, TitleBox } from './StorySection.styles'
 import StoryInfo from '../StoryInfo/StoryInfo'
 
-const StorySection = ({ stories}: any) => {
+const StorySection = ({ stories }: any) => {
 	const animationControls = useAnimation()
 	const animationControlsSecond = useAnimation()
 	const animationControlsThird = useAnimation()
@@ -51,14 +51,14 @@ const StorySection = ({ stories}: any) => {
 			<InfoBox>
 				<Section>
 					<Selector>
-					<TitleBox
-					ref={ref2}
-					variants={Right}
-					initial='initial'
-					custom={{ duration: 1.1 }}
-					animate={animationControlsSecond}>
-					<h1>Core of the company</h1>
-				</TitleBox>
+						<TitleBox
+							ref={ref2}
+							variants={Right}
+							initial='initial'
+							custom={{ duration: 1.1 }}
+							animate={animationControlsSecond}>
+							<h1>Core of the company</h1>
+						</TitleBox>
 					</Selector>
 					<SelectorItems>
 						{stories?.map((story: any, i: number) => (
@@ -72,5 +72,3 @@ const StorySection = ({ stories}: any) => {
 }
 
 export default StorySection
-
-

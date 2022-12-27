@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container,InfoBox,TitleBox, } from './GoalSection.styles'
+import { Container, InfoBox, TitleBox } from './GoalSection.styles'
 import { Decoration, TextBox, ButtonBox } from '../../../atoms/SectionScheme/SectionScheme.styles'
 import { slideRight, Right } from '../../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
@@ -13,8 +13,6 @@ const GoalSection = () => {
 	const animationControlsSecond = useAnimation()
 	const animationControlsThird = useAnimation()
 
-	
-
 	if (inView) {
 		animationControls.start('animate')
 	}
@@ -25,7 +23,6 @@ const GoalSection = () => {
 		animationControlsThird.start('animate')
 	}
 
-	
 	return (
 		<Container>
 			<Decoration
@@ -55,7 +52,6 @@ const GoalSection = () => {
 						Latin literature from 45 BC, making it over 2000 years old.
 					</p>
 				</TextBox>
-				
 			</InfoBox>
 		</Container>
 	)

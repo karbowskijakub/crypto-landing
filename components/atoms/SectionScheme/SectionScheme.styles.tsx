@@ -68,10 +68,9 @@ export const CryptoBox = styled(motion.div)`
 	border-bottom: 1px solid ${({ theme }) => theme.colors.blue};
 	@media only screen and ${breakpoints.device.lg} {
 		display: flex;
-		flex-direction:row;
+		flex-direction: row;
 		justify-content: space-between;
-		padding:8em 4em;
-
+		padding: 8em 4em;
 	}
 `
 export const DataBox = styled.div`
@@ -85,12 +84,11 @@ export const DataBox = styled.div`
 	}
 `
 export const NameBox = styled.div`
-
-@media only screen and ${breakpoints.device.lg} {
-	display: flex;
-flex-direction:row;
-justify-content: center;
-}
+	@media only screen and ${breakpoints.device.lg} {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
 
 	color: ${({ theme }) => theme.colors.black};
 `
@@ -113,7 +111,6 @@ export const CategoryBox = styled.div`
 	font-size: ${({ theme }) => theme.fontSize.m};
 	@media only screen and ${breakpoints.device.lg} {
 		margin-left: 1.5em;
-	
 	}
 	h1 {
 		@media only screen and ${breakpoints.device.lg} {
@@ -153,9 +150,5 @@ export const HoverBox = styled.div`
 		justify-content: space-between;
 		flex-direction: row;
 		padding: 5em 6em;
-	
 	}
-
-
-	
 `

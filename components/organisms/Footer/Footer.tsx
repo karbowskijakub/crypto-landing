@@ -1,7 +1,5 @@
 import React from 'react'
-
-
-import { Container, CopyBox, CopyContainer, LogoBox, FooterInfo, InfoBox,TextBox } from './Footer.styles'
+import { Container, CopyBox, CopyContainer, LogoBox, FooterInfo, InfoBox, TextBox } from './Footer.styles'
 import { LogoContainer } from '../Navbar/Navbar.styles'
 import { IconsWrapper, LinkContainerIcon, LinkedinIcon, TwitterIcon } from '../../molecules/NavLinks/NavLinks.styles'
 import { Right } from '../../animations/animations.js'
@@ -32,9 +30,7 @@ const Footer = () => {
 						</LogoContainer>
 					</LogoBox>
 					<TextBox>
-						<p>
-						We help in a marketing promotion in the world of cryptocurrencies.
-						</p>
+						<p>We help in a marketing promotion in the world of cryptocurrencies.</p>
 					</TextBox>
 				</FooterInfo>
 				<CopyBox

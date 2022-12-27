@@ -68,7 +68,5 @@ export const StatsBox = styled(motion.div)`
 	@media only screen and ${breakpoints.device.md} {
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(1, 1fr);
-		
 	}
-
 `

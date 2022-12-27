@@ -38,10 +38,9 @@ export const InfoBox = styled.div`
 	padding: 2em;
 `
 export const TextBox = styled(motion.div)`
-
 	border-bottom: 1px solid ${({ theme }) => theme.colors.grey};
 	p {
-		text-align:center;
+		text-align: center;
 		color: ${({ theme }) => theme.colors.white};
 	}
 	@media only screen and ${breakpoints.device.xs} {

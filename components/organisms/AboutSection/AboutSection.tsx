@@ -67,7 +67,7 @@ const AboutSection = () => {
 						initial='initial'
 						custom={{ duration: 1.1 }}
 						animate={animationControlsFourth}>
-						<HeroLinkBlack href="/About">
+						<HeroLinkBlack href='/About'>
 							More about us
 							<ShareBlack />
 						</HeroLinkBlack>

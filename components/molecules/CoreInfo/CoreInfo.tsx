@@ -1,17 +1,10 @@
 import React from 'react'
-import {
-	TitleBox,
-	TextBox,
-	CryptoBox,
-	DataBox,
-	CategoryBox
-
-} from '../../atoms/SectionScheme/SectionScheme.styles'
+import { TitleBox, TextBox, CryptoBox, DataBox, CategoryBox } from '../../atoms/SectionScheme/SectionScheme.styles'
 import { slideLeft } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 import Image from 'next/legacy/image'
-import { IconBox, SetupBox, InformationBox,NameBox } from './CoreInfo.styles'
+import { IconBox, SetupBox, InformationBox, NameBox } from './CoreInfo.styles'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 const CoreInfo = ({ name, text, thumbnail }: any) => {
@@ -35,7 +28,7 @@ const CoreInfo = ({ name, text, thumbnail }: any) => {
 							src={'https:' + thumbnail.fields.file.url}
 							width={thumbnail.fields.file.details.image.width}
 							height={thumbnail.fields.file.details.image.height}
-							alt='dds'
+							alt='icon'
 						/>
 					</IconBox>
 					<NameBox>

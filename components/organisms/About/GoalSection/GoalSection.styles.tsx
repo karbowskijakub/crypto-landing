@@ -15,21 +15,20 @@ export const InfoBox = styled.div`
 	margin-top: 7em;
 	margin-bottom: 7em;
 	padding: 2em;
-	display:flex;
-	justify-content:flex-start;
-	flex-direction:column;
-	align-items:center;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
 	@media only screen and ${breakpoints.device.lg} {
-		display:flex;
-		justify-content:space-between;
-		align-items:center;
-		flex-direction:row;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
 	}
-
 `
 export const TitleBox = styled(motion.div)`
 	text-align: center;
-	
+
 	@media only screen and ${breakpoints.device.sm} {
 		font-size: ${({ theme }) => theme.fontSize.xl};
 	}
@@ -39,6 +38,5 @@ export const TitleBox = styled(motion.div)`
 	}
 	@media only screen and ${breakpoints.device.xl} {
 		font-size: ${({ theme }) => theme.fontSize.xxl};
-		
 	}
 `

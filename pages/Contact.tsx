@@ -3,12 +3,12 @@ import HeroContact from '../components/organisms/Contact/HeroContact/HeroContact
 import FormSection from '../components/organisms/Contact/FormSection/FormSection'
 
 const Contact = () => {
-  return (
-    <>
-    <HeroContact/>
-    <FormSection/>
-    </>
-  )
+	return (
+		<>
+			<HeroContact />
+			<FormSection />
+		</>
+	)
 }
 
 export default Contact
