@@ -18,7 +18,7 @@ export const FormBox = styled.form`
 `
 
 export const TextForm = styled(TextField)`
-	margin: 1.5em 0;
+	margin: 2em 0;
 
 	& label.Mui-focused {
 		color: ${({ theme }) => theme.colors.white};
