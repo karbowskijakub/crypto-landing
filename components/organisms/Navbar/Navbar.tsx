@@ -14,7 +14,7 @@ const Navbar = () => {
 			<Container>
 				<NavWrapper>
 					<LogoWrapper variants={Right} custom={{ delay: 0.5 }} initial='initial' animate='animate'>
-						<LogoContainer href='#' passHref>
+						<LogoContainer href='/' passHref>
 							CryptoEnth
 						</LogoContainer>
 					</LogoWrapper>

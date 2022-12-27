@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { TextBox } from '../../organisms/ResultSection/ResultSection.styles'
-import { Container, CopyBox, CopyContainer, LogoBox, FooterInfo, InfoBox } from './Footer.styles'
+
+import { Container, CopyBox, CopyContainer, LogoBox, FooterInfo, InfoBox,TextBox } from './Footer.styles'
 import { LogoContainer } from '../Navbar/Navbar.styles'
 import { IconsWrapper, LinkContainerIcon, LinkedinIcon, TwitterIcon } from '../../molecules/NavLinks/NavLinks.styles'
 import { Right } from '../../animations/animations.js'
@@ -33,8 +33,7 @@ const Footer = () => {
 					</LogoBox>
 					<TextBox>
 						<p>
-							Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-							Latin literature from 45 BC, making it over 2000 years old.
+						We help in a marketing promotion in the world of cryptocurrencies.
 						</p>
 					</TextBox>
 				</FooterInfo>

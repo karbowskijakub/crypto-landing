@@ -1,15 +1,15 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import {
 	Decoration,
 	InfoBox,
 	TitleBox,
-	TextBox,
 	ButtonBox,
 	CryptoBox,
 	DataBox,
 	IconBox,
 	InformationBox,
 	NameBox,
+	DivBox,
 } from '../../atoms/SectionScheme/SectionScheme.styles'
 import { slideRight, Right } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
@@ -18,10 +18,10 @@ import { HeroButtonBlack } from '../../atoms/Button/Button'
 import { HeroLinkBlack } from '../HeroSection/HeroSection.styles'
 import { ShareBlack } from '../HeroSection/HeroSection.styles'
 import Image from 'next/image'
-import { Container } from './CoreSection.styles'
+import { Container, Selector, SelectorItems, Section, TextBox } from './CoreSection.styles'
 import CoreInfo from '../../molecules/CoreInfo/CoreInfo'
 
-const CoreSection = ({ cores }:any) => {
+const CoreSection = ({ cores }: any) => {
 	const animationControls = useAnimation()
 	const animationControlsSecond = useAnimation()
 	const animationControlsThird = useAnimation()
@@ -58,20 +58,26 @@ const CoreSection = ({ cores }:any) => {
 					animate={animationControlsSecond}>
 					<h1>Core of the company</h1>
 				</TitleBox>
-				<TextBox
-					ref={ref3}
-					variants={Right}
-					initial='initial'
-					custom={{ duration: 1.1 }}
-					animate={animationControlsThird}>
-					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-						Latin literature from 45 BC, making it over 2000 years old.
-					</p>
-				</TextBox>
-				{cores?.map((core:any, i:number) => (
-					<CoreInfo key={i} {...core} />
-				))}
+				<Section>
+					<Selector>
+						<TextBox
+							ref={ref3}
+							variants={Right}
+							initial='initial'
+							custom={{ duration: 1.1 }}
+							animate={animationControlsThird}>
+							<p>
+								Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+								Latin literature from 45 BC, making it over 2000 years old.
+							</p>
+						</TextBox>
+					</Selector>
+					<SelectorItems>
+						{cores?.map((core: any, i: number) => (
+							<CoreInfo key={i} {...core} />
+						))}
+					</SelectorItems>
+				</Section>
 			</InfoBox>
 		</Container>
 	)

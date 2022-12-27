@@ -6,6 +6,8 @@ import { theme } from '../assets/styles/theme.js'
 import MainTemplate from '../components/Templates/MainTemplate'
 import '../assets/styles/fonts.css'
 
+
+
 export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<ThemeProvider theme={theme}>

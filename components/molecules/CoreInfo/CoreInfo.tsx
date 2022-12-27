@@ -1,18 +1,17 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import {
 	TitleBox,
 	TextBox,
 	CryptoBox,
 	DataBox,
-	InformationBox,
-	CategoryBox,
-	NameBox,
+	CategoryBox
+
 } from '../../atoms/SectionScheme/SectionScheme.styles'
-import { slideRight } from '../../animations/animations.js'
+import { slideLeft } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 import Image from 'next/legacy/image'
-import { IconBox } from './CoreInfo.styles'
+import { IconBox, SetupBox, InformationBox,NameBox } from './CoreInfo.styles'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 const CoreInfo = ({ name, text, thumbnail }: any) => {
@@ -26,21 +25,23 @@ const CoreInfo = ({ name, text, thumbnail }: any) => {
 		<>
 			<CryptoBox
 				ref={ref2}
-				variants={slideRight}
+				variants={slideLeft}
 				initial='initial'
 				custom={{ duration: 1.1 }}
 				animate={animationControlsSecond}>
-				<IconBox>
-					<Image
-						src={'https:' + thumbnail.fields.file.url}
-						width={thumbnail.fields.file.details.image.width}
-						height={thumbnail.fields.file.details.image.height}
-						alt='dds'
-					/>
-				</IconBox>
-				<NameBox>
-					<h2>{name}</h2>
-				</NameBox>
+				<SetupBox>
+					<IconBox>
+						<Image
+							src={'https:' + thumbnail.fields.file.url}
+							width={thumbnail.fields.file.details.image.width}
+							height={thumbnail.fields.file.details.image.height}
+							alt='dds'
+						/>
+					</IconBox>
+					<NameBox>
+						<h2>{name}</h2>
+					</NameBox>
+				</SetupBox>
 				<InformationBox>{documentToReactComponents(text)}</InformationBox>
 			</CryptoBox>
 		</>

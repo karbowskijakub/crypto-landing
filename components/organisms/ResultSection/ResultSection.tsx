@@ -1,6 +1,6 @@
 // @ts-nocheck
-import React, { useContext } from 'react'
-import { Decoration } from '../../atoms/SectionScheme/SectionScheme.styles'
+import React from 'react'
+import { Decoration, DivBox } from '../../atoms/SectionScheme/SectionScheme.styles'
 import { slideRight, Right } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
@@ -40,15 +40,15 @@ const ResultSection = ({ results }) => {
 			/>
 
 			<InfoBox>
-				<ResultBox>
-					<TitleBox
-						ref={ref2}
-						variants={Right}
-						initial='initial'
-						custom={{ duration: 1.1 }}
-						animate={animationControlsSecond}>
-						<h1>Results</h1>
-					</TitleBox>
+				<TitleBox
+					ref={ref2}
+					variants={Right}
+					initial='initial'
+					custom={{ duration: 1.1 }}
+					animate={animationControlsSecond}>
+					<h1>Results</h1>
+				</TitleBox>
+				<DivBox>
 					<TextBox
 						ref={ref3}
 						variants={Right}
@@ -60,7 +60,8 @@ const ResultSection = ({ results }) => {
 							Latin literature from 45 BC, making it over 2000 years old.
 						</p>
 					</TextBox>
-				</ResultBox>
+				</DivBox>
+
 				<StatsBox ref={ref}>
 					{results?.map((result, i) => (
 						<ResultsInfo key={i} {...result} inView={inView} index={i} />

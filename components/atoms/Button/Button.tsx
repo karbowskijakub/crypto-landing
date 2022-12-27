@@ -56,9 +56,12 @@ export const HeroButtonBlack = styled(motion.button)`
 	padding: 1em 1.5em;
 	background-color: transparent;
 	font-weight: bold;
-	margin: 2.5em 0;
+	margin: 5em 0;
 	border: 1px solid ${({ theme }) => theme.colors.black};
 	z-index: 1;
-
 	overflow: hidden;
+	@media only screen and ${breakpoints.device.xl} {
+		padding: 2.5em 3.5em;
+		width: 250px;
+	}
 `

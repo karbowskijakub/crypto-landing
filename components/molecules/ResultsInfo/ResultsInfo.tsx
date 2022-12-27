@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Element, ElementWrap, ElementNumber, ElementInfo } from './ResultsInfo.styles'
 import { scaleY } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
@@ -8,8 +8,8 @@ import Image from 'next/image'
 interface Results {
 	inView?: any
 	index: number
-	number:string
-	text:string
+	number: string
+	text: string
 }
 
 const ResultsInfo = ({ number, text, inView, index }: Results) => {

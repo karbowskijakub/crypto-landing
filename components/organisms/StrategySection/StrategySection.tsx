@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import {
 	Decoration,
 	InfoBox,
@@ -10,6 +10,7 @@ import {
 	IconBox,
 	InformationBox,
 	NameBox,
+	DivBox
 } from '../../atoms/SectionScheme/SectionScheme.styles'
 import { slideRight, Right } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
@@ -58,6 +59,7 @@ const StrategySection = ({ strategies }:any) => {
 					animate={animationControlsSecond}>
 					<h1>Our strategy</h1>
 				</TitleBox>
+				<DivBox>
 				<TextBox
 					ref={ref3}
 					variants={Right}
@@ -69,7 +71,7 @@ const StrategySection = ({ strategies }:any) => {
 						Latin literature from 45 BC, making it over 2000 years old.
 					</p>
 				</TextBox>
-
+				</DivBox>
 				{strategies?.map((strategy:any, i:number) => (
 					<StrategyInfo key={i} {...strategy} />
 				))}

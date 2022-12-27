@@ -39,5 +39,14 @@ const getResultsData = async () => {
 		return []
 	}
 }
+const getStoryData = async () => {
+	try {
+		const { items } = await client.getEntries({ content_type: 'story' })
+		return items
+	} catch (error) {
+		console.log(error)
+		return []
+	}
+}
 
-export { getPortfolioData, getStrategyData, getCoreData, getResultsData }
+export { getPortfolioData, getStrategyData, getCoreData, getResultsData,getStoryData }

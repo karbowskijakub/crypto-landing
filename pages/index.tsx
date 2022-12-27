@@ -2,6 +2,9 @@ import Head from 'next/head'
 import MainPage from './MainPage'
 import { getPortfolioData, getStrategyData, getCoreData, getResultsData } from '../pages/api/api.js'
 
+
+
+
 interface Results {
 	projects?:any
 	strategies?:any
@@ -51,4 +54,4 @@ export async function getStaticProps() {
 		return { id, ...data }
 	})
 	return { props: { strategies, projects, cores, results } }
-}
+};

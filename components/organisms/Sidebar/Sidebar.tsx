@@ -45,23 +45,23 @@ const Sidebar = ({ isOpen, setOpen }: Open) => {
 					transition: sidebarTransition,
 				}}
 				exit={{ x: '100%', transition: sidebarTransition }}>
-				<LinkContainer className={ClassName} href='#'>
+				<LinkContainer className={ClassName} href='/'>
 					Home
 				</LinkContainer>
-				<LinkContainer className={ClassName} href='#'>
+				<LinkContainer className={ClassName} href='/About'>
 					About us
 				</LinkContainer>
-				<LinkContainer className={ClassName} href='#'>
+				<LinkContainer className={ClassName} href='/Portfolio'>
 					Portfolio
 				</LinkContainer>
-				<LinkContainer className={ClassName} href='#'>
+				<LinkContainer className={ClassName} href='/Contact'>
 					Contact
 				</LinkContainer>
 				<IconsWrapper>
-					<LinkContainerIcon className={ClassName} href='#'>
+					<LinkContainerIcon className={ClassName} href='/'>
 						<TwitterIcon />
 					</LinkContainerIcon>
-					<LinkContainerIcon className={ClassName} href='#'>
+					<LinkContainerIcon className={ClassName} href='/'>
 						<LinkedinIcon />
 					</LinkContainerIcon>
 				</IconsWrapper>

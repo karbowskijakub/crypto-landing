@@ -1,17 +1,17 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import {
 	TitleBox,
 	TextBox,
-	CryptoBox,
 	DataBox,
 	IconBox,
 	InformationBox,
 	CategoryBox,
-	NameBox,
+	HoverBox,
 } from '../../atoms/SectionScheme/SectionScheme.styles'
 import { slideRight } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
+import {CryptoBox,NameBox} from './PortfolioProject.styles'
 import Image from 'next/legacy/image'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
@@ -30,24 +30,27 @@ const PortfolioProject = ({ date, name, type, text, thumbnail }: any) => {
 				initial='initial'
 				custom={{ duration: 1.1 }}
 				animate={animationControlsSecond}>
-				<DataBox>
-					<h2>{date}</h2>
-				</DataBox>
-				<NameBox>
-					<IconBox>
-						<Image
-							src={'https:' + thumbnail.fields.file.url}
-							width={thumbnail.fields.file.details.image.width}
-							height={thumbnail.fields.file.details.image.height}
-							alt='dds'
-						/>
-					</IconBox>
-					<CategoryBox>
-						<h2>{type}</h2>
-						<h2>{name}</h2>
-					</CategoryBox>
-				</NameBox>
-				<InformationBox>{documentToReactComponents(text)}</InformationBox>
+				<HoverBox>
+					<DataBox>
+						<h2>{date}</h2>
+					</DataBox>
+					<NameBox>
+						<IconBox>
+							<Image
+								src={'https:' + thumbnail.fields.file.url}
+								width={thumbnail.fields.file.details.image.width}
+								height={thumbnail.fields.file.details.image.height}
+								alt='dds'
+							/>
+						</IconBox>
+
+						<CategoryBox>
+							<h1>{name}</h1>
+							<p>{type}</p>
+						</CategoryBox>
+					</NameBox>
+					<InformationBox>{documentToReactComponents(text)}</InformationBox>
+				</HoverBox>
 			</CryptoBox>
 		</>
 	)

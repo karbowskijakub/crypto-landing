@@ -41,12 +41,12 @@ const HeroSection = () => {
 				<Buttons variants={scaleY} initial='initial' animate='animate' custom={2.2}>
 					<HeroButton>
 						{' '}
-						<HeroLink href='#'>
+						<HeroLink href='/Contact'>
 							Contact <Share />
 						</HeroLink>
 					</HeroButton>
 					<HeroButton>
-						<HeroLink href='#'>
+						<HeroLink href='/Portfolio'>
 							Portfolio
 							<Share />
 						</HeroLink>

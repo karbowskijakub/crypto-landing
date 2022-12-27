@@ -10,6 +10,9 @@ export const Share = styled(RiShareBoxLine)`
 	cursor: pointer;
 	transition: all 0.3s;
 	margin-left: 0.1em;
+	@media only screen and ${breakpoints.device.xl} {
+		font-size: ${({ theme }) => theme.fontSize.xl};
+	}
 `
 export const ShareBlack = styled(RiShareBoxLine)`
 	display: block;
@@ -18,6 +21,9 @@ export const ShareBlack = styled(RiShareBoxLine)`
 	cursor: pointer;
 	transition: all 0.3s;
 	margin-left: 0.1em;
+	@media only screen and ${breakpoints.device.xl} {
+		font-size: ${({ theme }) => theme.fontSize.xl};
+	}
 `
 
 export const HeroWrapper = styled.section`
@@ -122,6 +128,9 @@ export const HeroLinkBlack = styled(Link)`
 	justify-content: center;
 	color: ${({ theme }) => theme.colors.black};
 	font-size: ${({ theme }) => theme.fontSize.s};
+	@media only screen and ${breakpoints.device.xl} {
+		font-size: ${({ theme }) => theme.fontSize.l};
+	}
 `
 export const Shadow = styled.div`
 	position: absolute;

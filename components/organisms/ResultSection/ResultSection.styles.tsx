@@ -25,10 +25,18 @@ export const TitleBox = styled(motion.div)`
 	h1 {
 		color: ${({ theme }) => theme.colors.white};
 	}
+	@media only screen and ${breakpoints.device.sm} {
+		font-size: ${({ theme }) => theme.fontSize.xl};
+	}
+	@media only screen and ${breakpoints.device.lg} {
+		font-size: ${({ theme }) => theme.fontSize.xxl};
+	}
+
+	margin: 3.5em 0;
 `
 
 export const InfoBox = styled.div`
-	margin-top: 6em;
+	margin-top: 4em;
 	padding: 2em;
 `
 export const TextBox = styled(motion.div)`
@@ -36,6 +44,13 @@ export const TextBox = styled(motion.div)`
 	p {
 		color: ${({ theme }) => theme.colors.white};
 	}
+	@media only screen and ${breakpoints.device.xs} {
+		max-width: 750px;
+	}
+	@media only screen and ${breakpoints.device.sm} {
+		font-size: ${({ theme }) => theme.fontSize.xl};
+	}
+	margin-bottom: 2em;
 `
 export const StatsBox = styled(motion.div)`
 	width: 100%;
@@ -45,6 +60,15 @@ export const StatsBox = styled(motion.div)`
 	gap: 5px;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
-`
+	@media only screen and ${breakpoints.device.lgx} {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+		font-size: ${({ theme }) => theme.fontSize.xxl};
+	}
+	@media only screen and ${breakpoints.device.md} {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(1, 1fr);
+		
+	}
 
-export const ResultBox = styled(motion.div)``
+`

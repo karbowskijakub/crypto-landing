@@ -1,8 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import {
 	TitleBox,
 	TextBox,
-	CryptoBox,
 	DataBox,
 	IconBox,
 	InformationBox,
@@ -11,7 +10,7 @@ import {
 import { slideRight } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
-import { CategoryBox } from './StrategyInfo.styles'
+import { CategoryBox, CryptoBox } from './StrategyInfo.styles'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 const StrategyInfo = ({ number, text, name }: any) => {
@@ -32,11 +31,10 @@ const StrategyInfo = ({ number, text, name }: any) => {
 				<DataBox>
 					<h2>{number}</h2>
 				</DataBox>
-				<NameBox>
-					<CategoryBox>
-						<h2>{name}</h2>
-					</CategoryBox>
-				</NameBox>
+				<CategoryBox>
+					<h2>{name}</h2>
+				</CategoryBox>
+
 				<InformationBox>{documentToReactComponents(text)}</InformationBox>
 			</CryptoBox>
 		</>

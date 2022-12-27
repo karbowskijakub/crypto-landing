@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import {
 	Decoration,
 	InfoBox,
@@ -11,6 +11,7 @@ import {
 	InformationBox,
 	CategoryBox,
 	NameBox,
+	DivBox,
 } from '../../atoms/SectionScheme/SectionScheme.styles'
 import { slideRight, Right, scaleY } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
@@ -23,7 +24,7 @@ import { Container } from './PortfolioSection.styles'
 import PortfolioProject from '../../molecules/PortfolioProject/PortfolioProject'
 import Image from 'next/image'
 
-const PortfolioSection = ({ projects }:any) => {
+const PortfolioSection = ({ projects }: any) => {
 	const animationControls = useAnimation()
 	const [ref, inView] = useInView({ threshold: 0.5 })
 	if (inView) {
@@ -65,19 +66,20 @@ const PortfolioSection = ({ projects }:any) => {
 					animate={animationControlsSecond}>
 					<h1>Portfolio</h1>
 				</TitleBox>
-				<TextBox
-					ref={ref3}
-					variants={Right}
-					initial='initial'
-					custom={{ duration: 1.1 }}
-					animate={animationControlsThird}>
-					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-						Latin literature from 45 BC, making it over 2000 years old.
-					</p>
-				</TextBox>
-
-				{projects?.map((project:any, i:number) => (
+				<DivBox>
+					<TextBox
+						ref={ref3}
+						variants={Right}
+						initial='initial'
+						custom={{ duration: 1.1 }}
+						animate={animationControlsThird}>
+						<p>
+							Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+							Latin literature from 45 BC, making it over 2000 years old.
+						</p>
+					</TextBox>
+				</DivBox>
+				{projects?.map((project: any, i: number) => i < 4 &&(
 					<PortfolioProject key={i} {...project} />
 				))}
 
@@ -88,8 +90,8 @@ const PortfolioSection = ({ projects }:any) => {
 						initial='initial'
 						custom={{ duration: 1.1 }}
 						animate={animationControlsFourth}>
-						<HeroLinkBlack href='#'>
-							More about us
+						<HeroLinkBlack href='/Portfolio'>
+							Portfolio
 							<ShareBlack />
 						</HeroLinkBlack>
 					</HeroButtonBlack>

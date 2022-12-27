@@ -8,15 +8,15 @@ const NavLinks = ({ isOpen }: any) => {
 	return (
 		<>
 			<Links variants={Right} custom={{ delay: 0.5 }} initial='initial' animate='animate'>
-				<LinkContainer href='#'>Home</LinkContainer>
-				<LinkContainer href='#'>About us</LinkContainer>
-				<LinkContainer href='#'>Portfolio</LinkContainer>
-				<LinkContainer href='#'>Contact</LinkContainer>
+				<LinkContainer href='/'>Home</LinkContainer>
+				<LinkContainer href='/About'>About us</LinkContainer>
+				<LinkContainer href='/Portfolio'>Portfolio</LinkContainer>
+				<LinkContainer href='/Contact'>Contact</LinkContainer>
 				<IconsWrapper>
-					<LinkContainerIcon href='#'>
+					<LinkContainerIcon href='/'>
 						<TwitterIcon />
 					</LinkContainerIcon>
-					<LinkContainerIcon href='#'>
+					<LinkContainerIcon href='/'>
 						<LinkedinIcon />
 					</LinkContainerIcon>
 				</IconsWrapper>
