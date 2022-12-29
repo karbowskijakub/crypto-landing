@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export const Container = styled.div`
 	width: 100%;
-	height: 1200px;
+	height: 1400px;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -47,7 +47,7 @@ export const Info = styled.div`
 
 	h1 {
 		color: ${({ theme }) => theme.colors.white};
-		font-size: ${({ theme }) => theme.fontSize.l};
+		font-size: ${({ theme }) => theme.fontSize.xl};
 		margin-bottom: 2em;
 		@media only screen and ${breakpoints.device.xs} {
 			font-size: ${({ theme }) => theme.fontSize.xxl};
@@ -58,7 +58,7 @@ export const Info = styled.div`
 	}
 	p {
 		color: ${({ theme }) => theme.colors.white};
-		font-size: ${({ theme }) => theme.fontSize.m};
+		font-size: ${({ theme }) => theme.fontSize.l};
 		@media only screen and ${breakpoints.device.xs} {
 			font-size: ${({ theme }) => theme.fontSize.l};
 		}
@@ -69,7 +69,7 @@ export const Info = styled.div`
 `
 export const InfoContainer = styled(motion.div)`
 	width: 100%;
-	height: 100%;
+	height: 50%;
 	z-index: 10;
 	display: flex;
 	align-items: center;
@@ -77,9 +77,9 @@ export const InfoContainer = styled(motion.div)`
 `
 export const FormBox = styled(motion.div)`
 	width: 100%;
-	height: 100%;
+	height: 30%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    z-index:10;
+	z-index: 10;
 `

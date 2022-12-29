@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container } from './AboutSection.styles'
 import { Decoration, InfoBox, TitleBox, TextBox, ButtonBox } from '../../atoms/SectionScheme/SectionScheme.styles'
 import { slideRight, Right } from '../../animations/animations.js'
@@ -18,18 +18,26 @@ const AboutSection = () => {
 	const animationControlsThird = useAnimation()
 	const animationControlsFourth = useAnimation()
 
-	if (inView) {
-		animationControls.start('animate')
-	}
-	if (inView2) {
-		animationControlsSecond.start('animate')
-	}
-	if (inView3) {
-		animationControlsThird.start('animate')
-	}
-	if (inView4) {
-		animationControlsFourth.start('animate')
-	}
+	useEffect(() => {
+		if (inView) {
+			animationControls.start('animate')
+		}
+	}, [animationControls, inView])
+	useEffect(() => {
+		if (inView2) {
+			animationControlsSecond.start('animate')
+		}
+	}, [animationControlsSecond, inView2])
+	useEffect(() => {
+		if (inView3) {
+			animationControlsThird.start('animate')
+		}
+	}, [animationControlsThird, inView3])
+	useEffect(() => {
+		if (inView4) {
+			animationControlsFourth.start('animate')
+		}
+	}, [animationControlsFourth, inView4])
 
 	return (
 		<Container>
@@ -56,8 +64,8 @@ const AboutSection = () => {
 					custom={{ duration: 1.1 }}
 					animate={animationControlsThird}>
 					<p>
-						Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-						Latin literature from 45 BC, making it over 2000 years old.
+						We invest in well-growing companies that are not afraid to take the necessary risk. We care about the good
+						interests of our clients and constantly analyze the market.
 					</p>
 				</TextBox>
 				<ButtonBox>

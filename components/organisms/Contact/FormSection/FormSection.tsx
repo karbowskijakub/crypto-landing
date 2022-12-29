@@ -1,5 +1,5 @@
-import React from 'react'
-import { Container, ContactBox, InfoContainer, Info, FormBox } from './FormSection.styles'
+import React, { useEffect } from 'react'
+import { Container, ContactBox, InfoContainer, Info, FormBox, Gridy } from './FormSection.styles'
 import { Decoration } from '../../../atoms/SectionScheme/SectionScheme.styles'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
@@ -15,16 +15,21 @@ const FormSection = () => {
 	const [ref2, inView2] = useInView({ threshold: 0.5 })
 	const [ref3, inView3] = useInView({ threshold: 0.5 })
 
-	if (inView) {
-		animationControls.start('animate')
-	}
-
-	if (inView2) {
-		animationControlsSecond.start('animate')
-	}
-	if (inView3) {
-		animationControlsThird.start('animate')
-	}
+	useEffect(() => {
+		if (inView) {
+			animationControls.start('animate')
+		}
+	}, [animationControls, inView])
+	useEffect(() => {
+		if (inView2) {
+			animationControlsSecond.start('animate')
+		}
+	}, [animationControlsSecond, inView2])
+	useEffect(() => {
+		if (inView3) {
+			animationControlsThird.start('animate')
+		}
+	}, [animationControlsThird, inView3])
 
 	return (
 		<Container>
@@ -53,8 +58,8 @@ const FormSection = () => {
 						<h1>Contact Us</h1>
 						<p>
 							Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help
-							your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop
-							us a line.
+							your business grow. If you are looking for unique digital experiences that’s relatable to your users,
+							contact us.
 						</p>
 					</Info>
 				</InfoContainer>

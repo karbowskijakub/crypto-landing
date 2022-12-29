@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Container, CopyBox, CopyContainer, LogoBox, FooterInfo, InfoBox, TextBox } from './Footer.styles'
 import { LogoContainer } from '../Navbar/Navbar.styles'
 import { IconsWrapper, LinkContainerIcon, LinkedinIcon, TwitterIcon } from '../../molecules/NavLinks/NavLinks.styles'
@@ -13,12 +13,16 @@ const Footer = () => {
 	const [ref, inView] = useInView({ threshold: 0.5 })
 	const [ref2, inView2] = useInView({ threshold: 0.5 })
 
-	if (inView) {
-		animationControls.start('animate')
-	}
-	if (inView2) {
-		animationControlsSecond.start('animate')
-	}
+	useEffect(() => {
+		if (inView) {
+			animationControls.start('animate')
+		}
+	}, [animationControls, inView])
+	useEffect(() => {
+		if (inView2) {
+			animationControlsSecond.start('animate')
+		}
+	}, [animationControlsSecond, inView2])
 
 	return (
 		<Container>

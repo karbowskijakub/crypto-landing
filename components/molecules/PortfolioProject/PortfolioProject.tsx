@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
 	TitleBox,
 	TextBox,
@@ -18,9 +18,12 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 const PortfolioProject = ({ date, name, type, text, thumbnail }: any) => {
 	const animationControlsSecond = useAnimation()
 	const [ref2, inView2] = useInView({ threshold: 0.5 })
-	if (inView2) {
-		animationControlsSecond.start('animate')
-	}
+
+	useEffect(() => {
+		if (inView2) {
+			animationControlsSecond.start('animate')
+		}
+	}, [animationControlsSecond, inView2])
 
 	return (
 		<>

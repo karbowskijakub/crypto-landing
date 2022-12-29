@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
 	TitleBox,
 	TextBox,
@@ -16,9 +16,11 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 const StrategyInfo = ({ number, text, name }: any) => {
 	const animationControls = useAnimation()
 	const [ref, inView] = useInView({ threshold: 0 })
-	if (inView) {
-		animationControls.start('animate')
-	}
+	useEffect(() => {
+		if (inView) {
+			animationControls.start('animate')
+		}
+	}, [animationControls, inView])
 
 	return (
 		<>

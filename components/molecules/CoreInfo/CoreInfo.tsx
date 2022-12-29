@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { TitleBox, TextBox, CryptoBox, DataBox, CategoryBox } from '../../atoms/SectionScheme/SectionScheme.styles'
 import { slideLeft } from '../../animations/animations.js'
 import { useInView } from 'react-intersection-observer'
@@ -10,9 +10,12 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 const CoreInfo = ({ name, text, thumbnail }: any) => {
 	const animationControlsSecond = useAnimation()
 	const [ref2, inView2] = useInView({ threshold: 0.5 })
-	if (inView2) {
-		animationControlsSecond.start('animate')
-	}
+
+	useEffect(() => {
+		if (inView2) {
+			animationControlsSecond.start('animate')
+		}
+	}, [animationControlsSecond, inView2])
 
 	return (
 		<>

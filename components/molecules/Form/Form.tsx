@@ -47,6 +47,7 @@ const Form = () => {
 						label: { color: 'white' },
 					}}
 				/>
+
 				<TextForm
 					fullWidth
 					id='email'
@@ -80,6 +81,7 @@ const Form = () => {
 					name='message'
 					label='Message'
 					variant='standard'
+					margin='normal'
 					multiline
 					minRows={2}
 					maxRows={2}
@@ -90,7 +92,7 @@ const Form = () => {
 						label: { color: 'white' },
 					}}
 				/>
-				<ButtonForm variant='contained' fullWidth type='submit'>
+				<ButtonForm variant='outlined' fullWidth type='submit'>
 					Submit
 				</ButtonForm>
 			</FormBox>

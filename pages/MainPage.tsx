@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import HeroSection from '../components/organisms/HeroSection/HeroSection'
 import AboutSection from '../components/organisms/AboutSection/AboutSection'
 import PortfolioSection from '../components/organisms/PortfolioSection/PortfolioSection'

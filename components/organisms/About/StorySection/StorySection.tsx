@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import {
 	Decoration,
 	InfoBox,
@@ -28,15 +28,22 @@ const StorySection = ({ stories }: any) => {
 	const [ref2, inView2] = useInView({ threshold: 0.5 })
 	const [ref3, inView3] = useInView({ threshold: 0.5 })
 
-	if (inView) {
-		animationControls.start('animate')
-	}
-	if (inView2) {
-		animationControlsSecond.start('animate')
-	}
-	if (inView3) {
-		animationControlsThird.start('animate')
-	}
+	useEffect(() => {
+		if (inView) {
+			animationControls.start('animate')
+		}
+	  }, [animationControls, inView]);
+	useEffect(() => {
+		if (inView2) {
+			animationControlsSecond.start('animate')
+		}
+	  }, [animationControlsSecond, inView2]);
+	useEffect(() => {
+		if (inView3) {
+			animationControlsThird.start('animate')
+		}
+	  }, [animationControlsThird, inView3]);
+
 
 	return (
 		<Container>

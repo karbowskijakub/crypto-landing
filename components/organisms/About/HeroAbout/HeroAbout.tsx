@@ -37,7 +37,7 @@ const HeroAbout = () => {
 					</Title>
 					<Line variants={Right} custom={{ delay: 1 }} initial='initial' animate='animate' />
 					<Paragraph variants={scaleY} initial='initial' animate='animate' custom={2.2}>
-						We help in a marketing promotion in the world of cryptocurrencies.{' '}
+						We help our clients succeed. Get to know us.{' '}
 					</Paragraph>
 				</Text>
 			</InfoBox>

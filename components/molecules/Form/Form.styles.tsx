@@ -9,17 +9,11 @@ export const FormBox = styled.form`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	width: 100%;
-	height: 100%;
-
-	@media only screen and ${breakpoints.device.lg} {
-		width: 60%;
-	}
+	min-width: 100%;
+	min-height: 100%;
 `
 
 export const TextForm = styled(TextField)`
-	margin: 2em 0;
-
 	& label.Mui-focused {
 		color: ${({ theme }) => theme.colors.white};
 	}
@@ -41,7 +35,4 @@ export const TextForm = styled(TextField)`
 		color: ${({ theme }) => theme.colors.white};
 	}
 `
-export const ButtonForm = styled(Button)`
-	margin: 3em;
-	background: ${({ theme }) => theme.colors.blue};
-`
+export const ButtonForm = styled(Button)``

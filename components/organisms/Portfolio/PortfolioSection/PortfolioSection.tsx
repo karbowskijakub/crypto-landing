@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
 	Decoration,
 	InfoBox,
@@ -27,25 +27,32 @@ import Image from 'next/image'
 const PortfolioSection = ({ projects }: any) => {
 	const animationControls = useAnimation()
 	const [ref, inView] = useInView({ threshold: 0.5 })
-	if (inView) {
-		animationControls.start('animate')
-	}
-
 	const [ref2, inView2] = useInView({ threshold: 0.5 })
 	const [ref3, inView3] = useInView({ threshold: 0.5 })
 	const [ref4, inView4] = useInView({ threshold: 0.5 })
 	const animationControlsSecond = useAnimation()
 	const animationControlsThird = useAnimation()
 	const animationControlsFourth = useAnimation()
-	if (inView2) {
-		animationControlsSecond.start('animate')
-	}
-	if (inView3) {
-		animationControlsThird.start('animate')
-	}
-	if (inView4) {
-		animationControlsFourth.start('animate')
-	}
+	useEffect(() => {
+		if (inView) {
+			animationControls.start('animate')
+		}
+	}, [animationControls, inView])
+	useEffect(() => {
+		if (inView2) {
+			animationControlsSecond.start('animate')
+		}
+	}, [animationControlsSecond, inView2])
+	useEffect(() => {
+		if (inView3) {
+			animationControlsThird.start('animate')
+		}
+	}, [animationControlsThird, inView3])
+	useEffect(() => {
+		if (inView4) {
+			animationControlsFourth.start('animate')
+		}
+	}, [animationControlsFourth, inView4])
 
 	return (
 		<Container>

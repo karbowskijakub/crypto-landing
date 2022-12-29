@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
 	Decoration,
 	InfoBox,
@@ -29,15 +29,21 @@ const CoreSection = ({ cores }: any) => {
 	const [ref2, inView2] = useInView({ threshold: 0.5 })
 	const [ref3, inView3] = useInView({ threshold: 0.5 })
 
-	if (inView) {
-		animationControls.start('animate')
-	}
-	if (inView2) {
-		animationControlsSecond.start('animate')
-	}
-	if (inView3) {
-		animationControlsThird.start('animate')
-	}
+	useEffect(() => {
+		if (inView) {
+			animationControls.start('animate')
+		}
+	}, [animationControls, inView])
+	useEffect(() => {
+		if (inView2) {
+			animationControlsSecond.start('animate')
+		}
+	}, [animationControlsSecond, inView2])
+	useEffect(() => {
+		if (inView3) {
+			animationControlsThird.start('animate')
+		}
+	}, [animationControlsThird, inView3])
 
 	return (
 		<Container>
@@ -66,10 +72,7 @@ const CoreSection = ({ cores }: any) => {
 							initial='initial'
 							custom={{ duration: 1.1 }}
 							animate={animationControlsThird}>
-							<p>
-								Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-								Latin literature from 45 BC, making it over 2000 years old.
-							</p>
+							<p>Our company has solid advantages in what it does. We use the best technologies.</p>
 						</TextBox>
 					</Selector>
 					<SelectorItems>
