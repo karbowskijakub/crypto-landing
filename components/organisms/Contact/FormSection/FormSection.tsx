@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Container, ContactBox, InfoContainer, Info, FormBox, Gridy } from './FormSection.styles'
+import { Container, ContactBox, InfoContainer, Info, FormBox } from './FormSection.styles'
 import { Decoration } from '../../../atoms/SectionScheme/SectionScheme.styles'
 import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
